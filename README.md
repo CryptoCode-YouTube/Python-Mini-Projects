@@ -3,5 +3,5 @@
 
 
 Once you have done with the **_basics_** now it's time to build some cool projects. You can find some of them by [clicking this.](https://goo.gl/wnjTtx)
-And also I made some projects where you can find above, learn from the scratch and try to build your own stuff. There are tons of website that teach you creating the software using python. Find one that suits you much and starts exploring it.
+The above are some of them I created, learn from the scratch and try to build your own stuff. There are tons of website that teach you creating the software using python. Find one that suits you much and starts exploring it.
 
