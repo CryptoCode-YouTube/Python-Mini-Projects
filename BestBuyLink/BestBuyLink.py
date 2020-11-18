@@ -7,22 +7,49 @@
 import selenium
 from selenium import webdriver as wb
 import time
+from datetime import date
 
-try:
-    app = wb.Chrome(r"C:\Program Files\Google\Chrome\Application\chromedriver.exe")
-    url = 'https://www.amazon.in/OnePlus-Nord-Gray-256GB-Storage/dp/B08697MJD8/ref=lp_21827649031_1_1?s=electronics&ie=UTF8&qid=1605699704&sr=1-1'
-    app.get(url)
 
-    product = app.find_element_by_xpath("//span[@id='productTitle']")
-    product_text = product.text
-    print(product_text)
+today = ''
+old_date = ''
+old_price = ''
 
-    price = app.find_element_by_xpath("//*[@id='priceblock_ourprice']")
-    price_text = price.text
-    print(price_text)
+def fileManage():
+    pass
 
-    search = app.find_elements_by_xpath("//*[@id='twotabsearchtextbox']").click()
+def datetime():
+    # global date
+    today_date = date.today()
+    return str(today_date)
 
-except Exception as e:
-    print("Exception --> ", str(e))
+def scrapping():
+    try:
+        global date
+        app = wb.Chrome(r"C:\Program Files\Google\Chrome\Application\chromedriver.exe")
+        url = 'https://www.amazon.in/OnePlus-Nord-Gray-256GB-Storage/dp/B08697MJD8/ref=lp_21827649031_1_1?s=electronics&ie=UTF8&qid=1605699704&sr=1-1'
+        app.get(url)
 
+        product = app.find_element_by_xpath("//span[@id='productTitle']")
+        product_text = product.text
+        print(product_text)
+
+        price = app.find_element_by_xpath("//*[@id='priceblock_ourprice']")
+        price_text = price.text
+        print(price_text)
+
+        today = datetime()
+        print(today)
+
+        time.sleep(50)
+        app.quit()
+
+    except Exception as e:
+        print("Exception --> ", str(e))
+
+def main():
+    scrapping()
+
+
+
+if __name__ == '__main__':
+    main()
