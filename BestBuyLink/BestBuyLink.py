@@ -17,9 +17,11 @@ try:
     product_text = product.text
     print(product_text)
 
-    price = app.find_element_by_xpath("//span[contains('Price')]'")
+    price = app.find_element_by_xpath("//*[@id='priceblock_ourprice']")
     price_text = price.text
     print(price_text)
+
+    search = app.find_elements_by_xpath("//*[@id='twotabsearchtextbox']").click()
 
 except Exception as e:
     print("Exception --> ", str(e))
