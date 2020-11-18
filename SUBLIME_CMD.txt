@@ -10,6 +10,7 @@ CMD Build System Setup
 
 User Settings
 {
+	"anaconda_linting": false,
 	"bold_folder_labels": true,
 	"caret_extra_width": 1,
 	"caret_style": "phase",
@@ -101,5 +102,6 @@ User Settings
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true,
-	"word_wrap": false
+	"word_wrap": false,
+	"folder_exclude_patterns": [".svn", ".hg", "CVS"]
 }
